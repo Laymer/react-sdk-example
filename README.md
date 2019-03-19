@@ -1,5 +1,7 @@
 # react-sdk-example
 
+Check out our [documentation](http://docs.tokenanalyst.io) for more info. 
+
 ![react](https://i.imgur.com/1S5CkyWl.png)
 
 ## Running locally

@@ -1,6 +1,5 @@
 import {TokenAnalyst} from '@tokenanalyst/sdk';
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -16,18 +15,23 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.entries)
     return (
       <div className="App">
-        <ul>
-          {this.state.entries.map(entry => {
-            return(<li>
-              <div>{entry.BLOCKHASH}</div>
-              <div>{entry.TXHASH}</div>
-            </li>);
-          })}
-        </ul>
-      </div>
+      Please wait a couple of seconds ...
+      <table id="transaction-table">
+      <tbody>
+        <tr><td>Transaction hash</td><td>From</td><td>To</td></tr>
+        {this.state.entries.map(entry => {
+          return(<tr>
+              <td>{entry.TXHASH}</td>
+              <td>{entry.FROMADDR}</td>
+              <td>{entry.TOADDR}</td>
+            </tr>)
+        })
+        }
+        </tbody>
+      </table>
+    </div>
     );
   }
 }
